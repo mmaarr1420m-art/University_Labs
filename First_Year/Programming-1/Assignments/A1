@@ -1,0 +1,58 @@
+import java.util.Scanner;
+public class A1 
+{
+    public static void main(String[] args)
+    {
+        Scanner in = new Scanner (System.in);
+        
+        // Input Information :- 
+        System.out.print("Enter customer name: ");
+        String customerName = in.next();
+        
+        System.out.print("Enter product name: ");
+        String productName = in.next();
+        
+        System.out.print("Enter product price: ");
+        double productPrice = in.nextDouble();
+        
+        System.out.print("Enter quantity: ");
+        double quantity = in.nextDouble();
+        
+        System.out.print("Enter amount paid: ");
+        double amountPaid = in.nextDouble();
+        
+        System.out.println();
+        
+        /////////////////////////////////////////////////////
+        
+        // Calculation :-
+        double subtotal = quantity * productPrice;
+        double taxAmount = subtotal * 0.10;
+        double finalCost = subtotal + taxAmount;
+        double change = amountPaid - finalCost;
+        
+        /////////////////////////////////////////////////////
+        
+        // Print final result :-
+        System.out.println("---------- Shopping Receipt ----------");
+        
+        System.out.println("Customer: " + customerName);
+        System.out.println("Product: " + productName);
+        
+        System.out.println();
+        
+        System.out.printf("Subtotal: %.2f%n" , subtotal);
+        System.out.printf("Tax: %.2f%n" , taxAmount);
+        System.out.printf("Final Cost: %.2f%n", finalCost);
+        System.out.printf("Amount Paid: %.2f%n", amountPaid);
+        System.out.printf("Change: %.2f%n", change);
+        
+        System.out.println();
+        
+        System.out.println("Product Name Length: " + productName.length());
+        System.out.println("First Character: " + productName.charAt(0));
+        System.out.println("Receipt Code: " + customerName.charAt(0) + "-" + productName.charAt(0) + productName.length() );
+        
+        System.out.println("--------------------------------------");
+    }
+}
