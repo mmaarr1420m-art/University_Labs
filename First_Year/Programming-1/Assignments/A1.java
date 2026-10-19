@@ -54,5 +54,7 @@ public class A1
         System.out.println("Receipt Code: " + customerName.charAt(0) + "-" + productName.charAt(0) + productName.length() );
         
         System.out.println("--------------------------------------");
+
+        in.close();
     }
 }
